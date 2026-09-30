@@ -1,0 +1,9 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+ "required":["id","machine_id","prototype_id","test_date","acceptance_criteria","results","verdict"],
+ "properties":{
+  "id":{"type":"string","pattern":"^mtest-"},"machine_id":{"type":"string","pattern":"^mach-"},"prototype_id":{"type":"string"},"test_date":{"type":"string"},
+  "acceptance_criteria":{"type":"array","minItems":1,"items":{"type":"object","required":["metric","operator","target","unit"],"properties":{"metric":{"enum":["throughput","yield","loss","energy","water","product-quality","temperature","noise","vibration","sanitation","safety","downtime","changeover-time","other"]},"operator":{"enum":["<=",">=","between","pass"]},"target":{},"unit":{"type":"string"}}}},
+  "results":{"type":"array","items":{"type":"object","required":["metric","observed","unit","pass"],"properties":{"metric":{"type":"string"},"observed":{},"unit":{"type":"string"},"pass":{"type":"boolean"},"evidence":{"type":"string"}}}},
+  "verdict":{"enum":["pass","fail","revise-retest"]},"failure_notes":{"type":"array","items":{"type":"string"}},"next_revision":{"type":"array","items":{"type":"string"}}
+ }}

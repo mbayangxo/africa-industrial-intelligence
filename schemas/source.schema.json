@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://africa-industrial-intelligence.local/schemas/source.schema.json",
+  "title": "Source record", "type": "object", "additionalProperties": false,
+  "required": ["schema_version","id","title","publisher","publication_date","data_period","geographies","industries","commodities","accessed_at","source_type","primary_status","reliability","claims_supported"],
+  "properties": {
+    "schema_version": {"const":"1.0.0"}, "id":{"type":"string","pattern":"^src-[a-z0-9][a-z0-9-]+$"},
+    "title":{"type":"string","minLength":1}, "publisher":{"type":"string","minLength":1},
+    "url":{"type":"string","format":"uri"}, "repository_path":{"type":"string"},
+    "publication_date":{"type":["string","null"],"format":"date"},
+    "data_period":{"type":"object","required":["start","end"],"properties":{"start":{"type":["string","null"],"format":"date"},"end":{"type":["string","null"],"format":"date"}},"additionalProperties":false},
+    "geographies":{"type":"array","items":{"type":"string"}}, "industries":{"type":"array","items":{"type":"string"}}, "commodities":{"type":"array","items":{"type":"string"}},
+    "accessed_at":{"type":"string","format":"date"}, "source_type":{"enum":["official-statistics","government-report","customs-trade-data","standard-regulation","peer-reviewed","company-filing","supplier-specification","supplier-quotation","survey","interview","image-observation","api-dataset","spreadsheet","other"]},
+    "primary_status":{"enum":["primary","secondary"]},
+    "reliability":{"type":"object","required":["rating","notes"],"properties":{"rating":{"enum":["high","medium","low","unrated"]},"notes":{"type":"string"}},"additionalProperties":false},
+    "claims_supported":{"type":"array","items":{"type":"string","pattern":"^clm-[a-z0-9][a-z0-9-]+$"}},
+    "license":{"type":["string","null"]}, "language":{"type":"string"}, "archive_checksum":{"type":"string"}, "notes":{"type":"string"}
+  }, "anyOf":[{"required":["url"]},{"required":["repository_path"]}]
+}

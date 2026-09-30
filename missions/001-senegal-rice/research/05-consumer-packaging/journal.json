@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "mission_id": "mission-001",
+  "entries": [
+    {
+      "id": "jrnl-m001-cons-search-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "search",
+      "query_or_reference": "site:africarice.org Senegal rice consumer preferences imported local broken rice PDF",
+      "outcome": "Service returned HTTP 401 Unauthorized; no result page or source was inspected.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-cons-search-002",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "search",
+      "query_or_reference": "Senegal rice consumer preferences local imported rice study PDF",
+      "outcome": "Service returned HTTP 401 Unauthorized; no result page or source was inspected.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-cons-search-003",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "search",
+      "query_or_reference": "site:isra.sn riz S\u00e9n\u00e9gal consommation pr\u00e9f\u00e9rence qualit\u00e9 riz local",
+      "outcome": "Service returned HTTP 401 Unauthorized; no result page or source was inspected.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-cons-search-004",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "search",
+      "query_or_reference": "site:fao.org Senegal rice value chain consumer preference broken rice",
+      "outcome": "Service returned HTTP 401 Unauthorized; no result page or source was inspected.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-cons-search-005",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "search",
+      "query_or_reference": "Senegal rice consumer preferences imported local Demont",
+      "outcome": "Service returned HTTP 401 Unauthorized; no result page or source was inspected.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-cons-search-006",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "search",
+      "query_or_reference": "Senegal rice consumer preferences",
+      "outcome": "Execution environment proxy returned HTTP 403 before a response was acquired.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-cons-gap-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "evidence-gap",
+      "query_or_reference": "consumer-packaging workstream",
+      "outcome": "No accessible source was acquired for consumer choice, sensory quality, price, packaging, branding or distribution.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-cons-gap-002",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "evidence-gap",
+      "query_or_reference": "consumer-packaging workstream",
+      "outcome": "Current and subnational evidence could not be assessed.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-cons-gap-003",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "evidence-gap",
+      "query_or_reference": "consumer-packaging workstream",
+      "outcome": "Product definitions and study designs could not be inspected.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-cons-question-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "unanswered-question",
+      "query_or_reference": "How do product quality, packaging and brand perception, price, and availability independently affect choice?",
+      "outcome": "Unanswered because no source content was retrievable.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-cons-question-002",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "unanswered-question",
+      "query_or_reference": "How do choices vary by geography, channel, economic segment, dish and household versus food-service use?",
+      "outcome": "Unanswered because no source content was retrievable.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-cons-question-003",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "unanswered-question",
+      "query_or_reference": "Which findings can be supported by revealed behavior rather than stated preference alone?",
+      "outcome": "Unanswered because no source content was retrievable.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-cons-handoff-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Consumer Intelligence and Brand/Packaging",
+      "activity": "handoff",
+      "query_or_reference": "Consumer evidence acquisition",
+      "outcome": "Blocked packet returned without substantive conclusions.",
+      "source_ids": [],
+      "handoff_to": "Industrial Intelligence Director"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://africa-industrial-intelligence.local/schemas/research-journal.schema.json",
+  "title": "Research journal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "mission_id", "entries"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "mission_id": {"type": "string", "pattern": "^mission-[0-9]{3}$"},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "timestamp", "agent_role", "activity", "outcome"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^jrnl-[a-z0-9-]+$"},
+          "timestamp": {"type": "string", "format": "date-time"},
+          "agent_role": {"type": "string", "minLength": 1},
+          "activity": {"enum": ["search", "source-considered", "source-rejected", "evidence-gap", "contradiction", "hypothesis-revision", "unanswered-question", "handoff", "stop"]},
+          "query_or_reference": {"type": "string"},
+          "outcome": {"type": "string", "minLength": 1},
+          "source_ids": {"type": "array", "items": {"type": "string", "pattern": "^src-"}},
+          "handoff_to": {"type": "string"},
+          "reason": {"type": "string"}
+        }
+      }
+    }
+  }
+}

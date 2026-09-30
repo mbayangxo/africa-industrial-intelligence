@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "mission_id": "mission-001",
+  "entries": [
+    {
+      "id": "jrnl-m001-bt-search-ansd",
+      "timestamp": "2026-09-29T18:40:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "search",
+      "query_or_reference": "site:ansd.sn riz Sénégal production région 2023 pdf",
+      "outcome": "Locate official national and subnational statistics; search service returned HTTP 401 Unauthorized and no source content was inspected.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-search-ministry",
+      "timestamp": "2026-09-29T18:40:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "search",
+      "query_or_reference": "site:agriculture.gouv.sn riz Sénégal production 2022 vallée Casamance pdf",
+      "outcome": "Locate ministry production-system and regional evidence; search service returned HTTP 401 Unauthorized and no source content was inspected.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-search-fao",
+      "timestamp": "2026-09-29T18:40:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "search",
+      "query_or_reference": "site:fao.org Sénégal riz production consommation importations rapport pdf",
+      "outcome": "Locate FAO baseline and methodology; search service returned HTTP 401 Unauthorized and no source content was inspected.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-search-usda-site",
+      "timestamp": "2026-09-29T18:40:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "search",
+      "query_or_reference": "site:ipad.fas.usda.gov Senegal rice production imports 2025",
+      "outcome": "Locate an independent production and trade series; search service returned HTTP 401 Unauthorized and no source content was inspected.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-search-usda-retry",
+      "timestamp": "2026-09-29T18:40:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "search",
+      "query_or_reference": "Senegal rice production imports USDA FAS 2024",
+      "outcome": "Retry independent baseline discovery; search service returned HTTP 401 Unauthorized and no source content was inspected.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-endpoint-comtrade",
+      "timestamp": "2026-09-29T18:40:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "search",
+      "query_or_reference": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2023&reporterCode=686&cmdCode=1006&flowCode=M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500",
+      "outcome": "Test public UN Comtrade access for a Senegal rice import observation; connection was denied by the network proxy before content retrieval.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-endpoint-faostat",
+      "timestamp": "2026-09-29T18:40:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "search",
+      "query_or_reference": "https://fenixservices.fao.org/faostat/api/v1/Definitions/en/QCL",
+      "outcome": "Test FAOSTAT metadata API access before dataset acquisition; connection was denied by the network proxy before content retrieval.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-endpoint-fao",
+      "timestamp": "2026-09-29T18:40:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "search",
+      "query_or_reference": "https://www.fao.org",
+      "outcome": "Diagnose direct access to an authoritative publisher; CONNECT tunnel failed with proxy HTTP 403 before publisher content retrieval.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-gap-1",
+      "timestamp": "2026-09-29T18:41:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "evidence-gap",
+      "query_or_reference": "National production, area and yield series",
+      "outcome": "Unresolved because no authoritative source content could be retrieved in this environment.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-gap-2",
+      "timestamp": "2026-09-29T18:41:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "evidence-gap",
+      "query_or_reference": "Subnational production-system and season data",
+      "outcome": "Unresolved because no authoritative source content could be retrieved in this environment.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-gap-3",
+      "timestamp": "2026-09-29T18:41:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "evidence-gap",
+      "query_or_reference": "Consumption and supply-use estimates",
+      "outcome": "Unresolved because no authoritative source content could be retrieved in this environment.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-gap-4",
+      "timestamp": "2026-09-29T18:41:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "evidence-gap",
+      "query_or_reference": "Import and export observations by year, product and partner",
+      "outcome": "Unresolved because no authoritative source content could be retrieved in this environment.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-gap-5",
+      "timestamp": "2026-09-29T18:41:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "evidence-gap",
+      "query_or_reference": "Evidence on formal re-exports and informal regional flows",
+      "outcome": "Unresolved because no authoritative source content could be retrieved in this environment.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-gap-6",
+      "timestamp": "2026-09-29T18:41:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "evidence-gap",
+      "query_or_reference": "Documented domestic value-chain actors and economics",
+      "outcome": "Unresolved because no authoritative source content could be retrieved in this environment.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-question-1",
+      "timestamp": "2026-09-29T18:42:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "unanswered-question",
+      "query_or_reference": "Which official series is the current baseline and how does it define the crop year?",
+      "outcome": "Requires inspected public evidence; no answer asserted.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-question-2",
+      "timestamp": "2026-09-29T18:42:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "unanswered-question",
+      "query_or_reference": "Which subnational units have comparable observations across time?",
+      "outcome": "Requires inspected public evidence; no answer asserted.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-question-3",
+      "timestamp": "2026-09-29T18:42:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "unanswered-question",
+      "query_or_reference": "How do paddy production and milled-rice availability reconcile?",
+      "outcome": "Requires inspected public evidence; no answer asserted.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-question-4",
+      "timestamp": "2026-09-29T18:42:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "unanswered-question",
+      "query_or_reference": "How do Senegal-reported trade values compare with partner mirror data?",
+      "outcome": "Requires inspected public evidence; no answer asserted.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-question-5",
+      "timestamp": "2026-09-29T18:42:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "unanswered-question",
+      "query_or_reference": "What portion of regional flow is absent from formal trade records?",
+      "outcome": "Requires inspected public evidence; no answer asserted.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-bt-handoff-director",
+      "timestamp": "2026-09-29T18:43:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "handoff",
+      "query_or_reference": "Network access limitation and zero substantive evidence coverage",
+      "outcome": "Reported blockage and preserved exact acquisition attempts; no source or claim records created.",
+      "source_ids": [],
+      "handoff_to": "Industrial Intelligence Director"
+    },
+    {
+      "id": "jrnl-m001-bt-stop",
+      "timestamp": "2026-09-29T18:44:00Z",
+      "agent_role": "Trade & Market Researcher / Agriculture & Value Chain Researcher",
+      "activity": "stop",
+      "query_or_reference": "Public desk-research acquisition",
+      "outcome": "Stopped because search authorization and direct network proxy failures prevented source inspection. Repeat in a network-enabled environment.",
+      "source_ids": [],
+      "reason": "Creating claims from uninspected sources would violate the research standard."
+    }
+  ]
+}

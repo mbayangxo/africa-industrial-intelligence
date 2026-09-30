@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema", "$id":"https://africa-industrial-intelligence.local/schemas/claim.schema.json",
+  "title":"Atomic claim", "type":"object", "additionalProperties":false,
+  "required":["schema_version","id","statement","classification","quantitative","source_ids","geographies","status","created_at"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"}, "id":{"type":"string","pattern":"^clm-[a-z0-9][a-z0-9-]+$"}, "statement":{"type":"string","minLength":1},
+    "classification":{"enum":["FACT","ESTIMATE","ASSUMPTION","SCENARIO","HYPOTHESIS"]}, "quantitative":{"type":"boolean"},
+    "source_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^src-[a-z0-9][a-z0-9-]+$"}},
+    "source_locators":{"type":"array","items":{"type":"object","required":["source_id","locator"],"properties":{"source_id":{"type":"string"},"locator":{"type":"string","minLength":1}},"additionalProperties":false}},
+    "methodology":{"type":"string"}, "uncertainty":{"type":"string"}, "unit":{"type":["string","null"]}, "currency":{"type":["string","null"]}, "price_year":{"type":["integer","null"]},
+    "geographies":{"type":"array","items":{"type":"string"}}, "period":{"type":["string","null"]}, "origin":{"type":"object","properties":{"kind":{"enum":["external","founder","agent","analyst"]},"reference":{"type":"string"}},"required":["kind"],"additionalProperties":false},
+    "status":{"enum":["draft","reviewed","disputed","superseded"]}, "created_at":{"type":"string","format":"date"}, "reviewed_by":{"type":"string"}, "supersedes":{"type":"string"}, "tags":{"type":"array","items":{"type":"string"}}
+  }
+}
