@@ -1,0 +1,21 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+ "required":["id","name","functions","assemblies","throughput","quality_constraints","safety_constraints","localization","maintenance","evidence_claim_ids"],
+ "properties":{
+  "id":{"type":"string","pattern":"^mach-"},"name":{"type":"string","minLength":1},
+  "functions":{"type":"array","minItems":1,"items":{"type":"string"}},
+  "throughput":{"type":"object","required":["value","unit","basis"],"properties":{"value":{"type":["number","null"]},"unit":{"type":"string"},"basis":{"type":"string"}}},
+  "assemblies":{"type":"array","items":{"type":"object","required":["id","name","function","components"],"properties":{
+    "id":{"type":"string"},"name":{"type":"string"},"function":{"type":"string"},
+    "components":{"type":"array","items":{"type":"object","required":["name","category","criticality","localization_status"],"properties":{
+      "name":{"type":"string"},"category":{"enum":["structure","food-contact","power","transmission","bearing","screen","blade","fastener","control","sensor","seal","pneumatic","hydraulic","other"]},
+      "material":{"type":["string","null"]},"specification":{"type":["string","null"]},"tolerance":{"type":["string","null"]},
+      "criticality":{"enum":["low","medium","high","safety-critical"]},
+      "localization_status":{"enum":["unknown","fabricate-local-now","source-local-now","assemble-local-import-components","local-after-training","import-required"]},
+      "supplier_ids":{"type":"array","items":{"type":"string"}},"evidence_claim_ids":{"type":"array","items":{"type":"string","pattern":"^clm-"}}
+    }}}}}},
+  "quality_constraints":{"type":"array","items":{"type":"string"}},"safety_constraints":{"type":"array","items":{"type":"string"}},
+  "localization":{"type":"object","properties":{"current_local_share_basis":{"type":"string"},"training_gaps":{"type":"array","items":{"type":"string"}},"tooling_gaps":{"type":"array","items":{"type":"string"}}}},
+  "maintenance":{"type":"object","properties":{"wear_parts":{"type":"array","items":{"type":"string"}},"inspection_points":{"type":"array","items":{"type":"string"}},"skills":{"type":"array","items":{"type":"string"}},"downtime_risks":{"type":"array","items":{"type":"string"}}}},
+  "evidence_claim_ids":{"type":"array","items":{"type":"string","pattern":"^clm-"}}
+ }}
