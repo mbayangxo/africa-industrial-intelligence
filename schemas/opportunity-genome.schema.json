@@ -1,0 +1,14 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+ "required":["id","mission_ids","name","stage","customer","problem","demand","inputs","processes","outputs","capabilities","infrastructure","machinery","labor","distribution","economics","localization","risks","evidence_claim_ids"],
+ "properties":{
+  "id":{"type":"string","pattern":"^genome-"},"mission_ids":{"type":"array","minItems":1,"items":{"type":"string","pattern":"^mission-[0-9]{3}$"}},
+  "name":{"type":"string","minLength":1},"stage":{"enum":["hypothesis","researched","buildability","red-teamed","rejected"]},
+  "customer":{"type":"object","required":["payer","user"],"properties":{"payer":{"type":"array","items":{"type":"string"}},"user":{"type":"array","items":{"type":"string"}},"geography":{"type":"array","items":{"type":"string"}}}},
+  "problem":{"type":"array","items":{"type":"string"}},"demand":{"type":"object","properties":{"recurring_spend":{"type":["boolean","null"]},"frequency":{"type":["string","null"]},"substitutes":{"type":"array","items":{"type":"string"}}}},
+  "inputs":{"type":"array","items":{"type":"string"}},"processes":{"type":"array","items":{"type":"string"}},"outputs":{"type":"array","items":{"type":"string"}},"coproducts":{"type":"array","items":{"type":"string"}},
+  "capabilities":{"type":"array","items":{"type":"string"}},"infrastructure":{"type":"array","items":{"type":"string"}},"machinery":{"type":"array","items":{"type":"string"}},"labor":{"type":"array","items":{"type":"string"}},"distribution":{"type":"array","items":{"type":"string"}},
+  "economics":{"type":"object","properties":{"capital_intensity":{"enum":["unknown","low","medium","high"]},"working_capital_cycle":{"type":["string","null"]},"utilization_sensitive":{"type":["boolean","null"]},"margin_claim_ids":{"type":"array","items":{"type":"string","pattern":"^clm-"}}}},
+  "localization":{"type":"object","properties":{"local_now":{"type":"array","items":{"type":"string"}},"local_after_training":{"type":"array","items":{"type":"string"}},"irreducible_imports":{"type":"array","items":{"type":"string"}}}},
+  "risks":{"type":"array","items":{"type":"string"}},"kill_conditions":{"type":"array","items":{"type":"string"}},"evidence_claim_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^clm-"}}
+ }}
