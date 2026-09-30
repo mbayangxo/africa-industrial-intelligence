@@ -1,5 +1,274 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema", "$id":"https://africa-industrial-intelligence.local/schemas/opportunity.schema.json",
-  "type":"object", "additionalProperties":false, "required":["schema_version","id","title","discovery_modes","geographies","thesis_claim_ids","founder_derived","stage","red_team"],
-  "properties":{"schema_version":{"const":"1.0.0"},"id":{"type":"string","pattern":"^opp-[a-z0-9-]+$"},"title":{"type":"string"},"discovery_modes":{"type":"array","minItems":1,"items":{"enum":["import-leakage","raw-value-leakage","infrastructure-gap","essential-business","empty-shelf","waste-to-value","technology-reset","africa-advantage","missing-middle","picks-and-shovels","independent"]}},"geographies":{"type":"array","items":{"type":"string"}},"thesis_claim_ids":{"type":"array","items":{"type":"string","pattern":"^clm-"}},"founder_derived":{"type":"boolean"},"stage":{"enum":["candidate","researched","red-teamed","validated","rejected","deferred"]},"red_team":{"type":"object","required":["status"],"properties":{"status":{"enum":["not-started","in-progress","passed","failed"]},"review_id":{"type":["string","null"]}},"additionalProperties":false}}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://africa-industrial-intelligence.local/schemas/opportunity.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "discovery_modes",
+    "geographies",
+    "thesis_claim_ids",
+    "founder_derived",
+    "stage",
+    "red_team"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^opp-[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "discovery_modes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "import-leakage",
+          "raw-value-leakage",
+          "infrastructure-gap",
+          "essential-business",
+          "empty-shelf",
+          "waste-to-value",
+          "technology-reset",
+          "africa-advantage",
+          "missing-middle",
+          "picks-and-shovels",
+          "independent"
+        ]
+      }
+    },
+    "geographies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "thesis_claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^clm-"
+      }
+    },
+    "founder_derived": {
+      "type": "boolean"
+    },
+    "stage": {
+      "enum": [
+        "candidate",
+        "researched",
+        "red-teamed",
+        "validated",
+        "rejected",
+        "deferred"
+      ]
+    },
+    "red_team": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not-started",
+            "in-progress",
+            "passed",
+            "failed"
+          ]
+        },
+        "review_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ingenuity_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "paths_tested"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not-started",
+            "in-progress",
+            "complete",
+            "not-applicable"
+          ]
+        },
+        "paths_tested": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "reuse-modify-existing",
+              "local-fabrication",
+              "local-assembly",
+              "shared-service",
+              "import-components",
+              "import-complete-equipment"
+            ]
+          }
+        },
+        "evidence_claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^clm-"
+          }
+        },
+        "irreducible_imports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rationale": {
+          "type": "string"
+        }
+      }
+    },
+    "route_to_market": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "channels"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not-started",
+            "in-progress",
+            "evidenced",
+            "not-applicable"
+          ]
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "merchant_economics_claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^clm-"
+          }
+        },
+        "reorder_behavior_claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^clm-"
+          }
+        },
+        "logistics_claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^clm-"
+          }
+        }
+      }
+    },
+    "expansion_architecture": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "not-started",
+            "in-progress",
+            "designed",
+            "not-applicable"
+          ]
+        },
+        "target_market_classes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "domestic",
+              "intra-african",
+              "diaspora"
+            ]
+          }
+        },
+        "market_specific_research_required": {
+          "type": "boolean"
+        },
+        "reusable_systems": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "traceability",
+              "barcodes",
+              "labeling",
+              "case-pallet",
+              "quality",
+              "distributor-data",
+              "logistics-interface"
+            ]
+          }
+        }
+      },
+      "required": [
+        "status",
+        "market_specific_research_required"
+      ]
+    },
+    "byproduct_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not-started",
+            "in-progress",
+            "complete",
+            "not-applicable"
+          ]
+        },
+        "relationship_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^rel-"
+          }
+        },
+        "buyer_specification_claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^clm-"
+          }
+        },
+        "safety_regulatory_claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^clm-"
+          }
+        }
+      }
+    }
+  }
 }
