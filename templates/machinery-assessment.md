@@ -19,8 +19,12 @@ Maintenance capability, consumables, spares, lead times, failure modes, redundan
 ## Automation and redesign
 Sensors/software/robotics; robust operation under local conditions; operator skills; repairability.
 
-## Local fabrication pathway
-| Component | Make/import now | Evidence | Capability gap | Localization trigger |
-|---|---|---|---|---|
+## Ingenuity-first pathway
+Test in this order unless evidence justifies skipping a step: reuse/modify existing equipment → local fabrication → local assembly from serviceable components → shared machinery/service model → imported irreducible components → complete imported equipment. Record why each rejected path fails on quality, food safety, precision, reliability, throughput, lifecycle cost, skills, spares, or time.
+
+| Component/function | Reuse/modify | Fabricate locally | Assemble locally | Share as service | Irreducible import | Evidence / decision trigger |
+|---|---|---|---|---|---|---|
+
+Identify components that local technical institutions or fabrication partners could learn to make over time, but do not assume a named institution has capability without evidence.
 
 ## Evidence, assumptions, unknowns, and independent technical review
