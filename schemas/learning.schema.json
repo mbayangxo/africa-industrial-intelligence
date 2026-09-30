@@ -1,0 +1,12 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+ "required":["id","kind","title","status","origin_mission_ids","geographies","claim_ids","source_ids","learned_at","reuse_rule"],
+ "properties":{
+  "id":{"type":"string","pattern":"^lrn-"},"kind":{"enum":["reusable-capability","recurring-constraint","rejected-hypothesis","machine-component","supplier-knowledge","field-finding","cross-mission-relationship","operating-outcome"]},
+  "title":{"type":"string","minLength":1},"status":{"enum":["hypothesis","evidenced","validated","superseded","rejected"]},
+  "origin_mission_ids":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","pattern":"^mission-[0-9]{3}$"}},
+  "geographies":{"type":"array","minItems":1,"items":{"type":"string"}},"sector_tags":{"type":"array","items":{"type":"string"}},
+  "claim_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^clm-"}},"source_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^src-"}},
+  "learned_at":{"type":"string"},"valid_through":{"type":["string","null"]},"reuse_rule":{"enum":["context-only","must-refresh","portable-technical","field-reverify"]},
+  "rejection_reason":{"type":["string","null"]},"supersedes":{"type":["string","null"]},"notes":{"type":"string"}
+ }}
