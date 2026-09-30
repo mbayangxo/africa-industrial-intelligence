@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://africa-industrial-intelligence.local/schemas/agent-output.schema.json",
+  "type":"object","additionalProperties":false,
+  "required":["schema_version","run_id","packet_id","mission_id","phase","role","status","new_knowledge","claim_ids","source_ids","unknowns","contradictions","handoffs","candidate_ids","disproof_tests"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},"run_id":{"type":"string","pattern":"^run-"},
+    "packet_id":{"type":"string","pattern":"^pkt-"},"mission_id":{"type":"string","pattern":"^mission-[0-9]{3}$"},
+    "phase":{"enum":["frame","specialist-research","blind-discovery","cross-examination","synthesis","red-team","human-decision"]},
+    "role":{"enum":["director","agriculture-value-chain","trade-market","consumer-intelligence","industrial-engineer","machinery-local-fabrication","economic-financial-modeler","circular-zero-waste","livestock-animal-nutrition","brand-packaging","infrastructure","standards-certification","independent-discovery","skeptic-red-team"]},
+    "status":{"enum":["complete","blocked","needs-follow-up"]},
+    "new_knowledge":{"type":"string","minLength":1},
+    "claim_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^clm-"}},
+    "source_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^src-"}},
+    "unknowns":{"type":"array","items":{"type":"string"}},
+    "contradictions":{"type":"array","items":{"type":"string"}},
+    "handoffs":{"type":"array","items":{"type":"object","required":["to_role","question"],"properties":{"to_role":{"type":"string"},"question":{"type":"string","minLength":1}},"additionalProperties":false}},
+    "candidate_ids":{"type":"array","items":{"type":"string","pattern":"^opp-"}},
+    "disproof_tests":{"type":"array","items":{"type":"string"}},
+    "founder_context_used":{"type":"boolean"},"peer_discovery_used":{"type":"boolean"}
+  }
+}
