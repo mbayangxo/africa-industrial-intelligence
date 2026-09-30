@@ -1,0 +1,10 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+ "required":["id","organization","geography","capabilities","verified_at","verification_method"],
+ "properties":{
+  "id":{"type":"string","pattern":"^fab-"},"organization":{"type":"string"},"geography":{"type":"string"},
+  "capabilities":{"type":"array","items":{"type":"object","required":["process","status"],"properties":{
+    "process":{"enum":["cutting","bending","rolling","welding","turning","milling","drilling","grinding","casting","sheet-metal","stainless-food-grade","electrical-panel","motor-rewinding","controls-integration","sensor-integration","surface-finishing","other"]},
+    "status":{"enum":["claimed","observed","sample-verified","production-verified"]},"max_dimensions":{"type":["string","null"]},"tolerance":{"type":["string","null"]},"materials":{"type":"array","items":{"type":"string"}}}}},
+  "verified_at":{"type":"string"},"verification_method":{"type":"string"},"claim_ids":{"type":"array","items":{"type":"string","pattern":"^clm-"}}
+ }}
