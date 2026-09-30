@@ -113,6 +113,37 @@ def validate_records(records, errors: list[str]):
         rel = display(path)
         for cid in opp.get("thesis_claim_ids", []):
             if cid not in claims: errors.append(f"{rel}: unknown claim id {cid}")
+        for section, keys in {
+            "ingenuity_review": ("evidence_claim_ids",),
+            "route_to_market": ("merchant_economics_claim_ids", "reorder_behavior_claim_ids", "logistics_claim_ids"),
+            "expansion_architecture": (),
+            "byproduct_review": ("buyer_specification_claim_ids", "safety_regulatory_claim_ids"),
+        }.items():
+            value = opp.get(section)
+            if value is not None and not isinstance(value, dict):
+                errors.append(f"{rel}: {section} must be an object")
+                continue
+            if isinstance(value, dict):
+                for key in keys:
+                    for cid in value.get(key, []):
+                        if cid not in claims: errors.append(f"{rel}: {section}.{key} references unknown claim id {cid}")
+        byproduct = opp.get("byproduct_review", {})
+        if isinstance(byproduct, dict):
+            for rid in byproduct.get("relationship_ids", []):
+                if rid not in records["relationships"]: errors.append(f"{rel}: byproduct_review references unknown relationship id {rid}")
+        if opp.get("stage") in {"researched", "red-teamed", "validated"}:
+            ingenuity = opp.get("ingenuity_review")
+            if not isinstance(ingenuity, dict) or ingenuity.get("status") not in {"complete", "not-applicable"}:
+                errors.append(f"{rel}: researched+ opportunity requires completed ingenuity review")
+            route = opp.get("route_to_market")
+            if not isinstance(route, dict) or route.get("status") not in {"evidenced", "not-applicable"}:
+                errors.append(f"{rel}: researched+ opportunity requires evidenced route-to-market review")
+            expansion = opp.get("expansion_architecture")
+            if not isinstance(expansion, dict) or expansion.get("status") not in {"designed", "not-applicable"}:
+                errors.append(f"{rel}: researched+ opportunity requires expansion architecture review")
+            circular = opp.get("byproduct_review")
+            if not isinstance(circular, dict) or circular.get("status") not in {"complete", "not-applicable"}:
+                errors.append(f"{rel}: researched+ opportunity requires by-product review")
         if opp.get("stage") in {"validated"} and opp.get("red_team", {}).get("status") != "passed":
             errors.append(f"{rel}: validated opportunity requires passed red team")
     for did, (disc, path) in records["discrepancies"].items():
