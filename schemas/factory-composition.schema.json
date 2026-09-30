@@ -1,0 +1,15 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+ "required":["id","mission_id","product","geography","configuration","target_throughput","process_steps","zones","utilities","labor","quality_control","storage","cost_model","evidence_claim_ids"],
+ "properties":{
+  "id":{"type":"string","pattern":"^factory-"},"mission_id":{"type":"string","pattern":"^mission-[0-9]{3}$"},"product":{"type":"string"},"geography":{"type":"string"},
+  "configuration":{"enum":["minimum-viable-industrial","locally-optimized-scale-up","larger-industrial"]},
+  "target_throughput":{"type":"object","required":["value","unit","basis"],"properties":{"value":{"type":["number","null"]},"unit":{"type":"string"},"basis":{"type":"string"}}},
+  "process_steps":{"type":"array","minItems":1,"items":{"type":"object","required":["sequence","name","input","output","machine_ids","qc_gate"],"properties":{"sequence":{"type":"integer"},"name":{"type":"string"},"input":{"type":"array","items":{"type":"string"}},"output":{"type":"array","items":{"type":"string"}},"machine_ids":{"type":"array","items":{"type":"string","pattern":"^mach-"}},"qc_gate":{"type":["string","null"]},"loss_basis":{"type":["string","null"]}}}},
+  "zones":{"type":"array","items":{"type":"object","required":["name","purpose"],"properties":{"name":{"type":"string"},"purpose":{"type":"string"},"area_m2":{"type":["number","null"]},"hygiene_class":{"type":["string","null"]}}}},
+  "utilities":{"type":"array","items":{"type":"object","required":["type","requirement"],"properties":{"type":{"enum":["electricity","thermal","water","compressed-air","ventilation","cold","wastewater","other"]},"requirement":{"type":["string","null"]},"redundancy":{"type":["string","null"]}}}},
+  "labor":{"type":"array","items":{"type":"object","required":["role","count"],"properties":{"role":{"type":"string"},"count":{"type":["integer","null"]},"shift":{"type":["string","null"]},"skill":{"type":["string","null"]},"training":{"type":["string","null"]}}}},
+  "quality_control":{"type":"array","items":{"type":"string"}},"storage":{"type":"array","items":{"type":"string"}},
+  "cost_model":{"type":"object","required":["capex","preopening","working_capital","cash_buffer"],"properties":{"capex":{"type":["number","null"]},"preopening":{"type":["number","null"]},"working_capital":{"type":["number","null"]},"cash_buffer":{"type":["number","null"]},"currency":{"type":["string","null"]},"price_date":{"type":["string","null"]}}},
+  "unknowns":{"type":"array","items":{"type":"string"}},"evidence_claim_ids":{"type":"array","items":{"type":"string","pattern":"^clm-"}}
+ }}
