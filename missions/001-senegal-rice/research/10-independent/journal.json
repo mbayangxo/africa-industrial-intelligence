@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "mission_id": "mission-001",
+  "entries": [
+    {
+      "id": "jrnl-m001-independent-search-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Independent Venture Discovery Agent",
+      "activity": "search",
+      "query_or_reference": "site:fao.org Senegal rice value chain imports production milling post harvest losses pdf; site:worldbank.org Senegal rice irrigation value chain report pdf; site:ifpri.org Senegal rice value chain consumer preferences imported local rice; site:saed.sn riz S\u00e9n\u00e9gal rapport annuel production stockage transformation",
+      "outcome": "Unauthorized; no content inspected.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-independent-search-002",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Independent Venture Discovery Agent",
+      "activity": "search",
+      "query_or_reference": "https://html.duckduckgo.com/html/?q=Senegal+rice+value+chain+FAO+pdf",
+      "outcome": "CONNECT tunnel failed; no content inspected.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-independent-search-003",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Independent Venture Discovery Agent",
+      "activity": "search",
+      "query_or_reference": "http://api.worldbank.org/v2/country/SEN/indicator/AG.PRD.CREL.MT?format=json",
+      "outcome": "Forbidden; no content inspected.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-independent-search-004",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Independent Venture Discovery Agent",
+      "activity": "search",
+      "query_or_reference": "https://fenixservices.fao.org/faostat/api/v1/en/data/QCL?area_code=195&item_code=27",
+      "outcome": "CONNECT tunnel failed / Forbidden; no content inspected.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-independent-gap-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Independent Venture Discovery Agent",
+      "activity": "evidence-gap",
+      "query_or_reference": "entire independent discovery workstream",
+      "outcome": "No public source content could be retrieved or inspected, so the requested evidence-led discovery could not be performed.",
+      "source_ids": []
+    },
+    {
+      "id": "jrnl-m001-independent-handoff-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Independent Venture Discovery Agent",
+      "activity": "handoff",
+      "query_or_reference": "Sealed blind discovery packet",
+      "outcome": "Blocked packet returned with no sources, claims, findings, or candidates; blinding preserved.",
+      "source_ids": [],
+      "handoff_to": "Industrial Intelligence Director"
+    }
+  ]
+}

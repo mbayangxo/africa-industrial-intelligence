@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema", "$id":"https://africa-industrial-intelligence.local/schemas/discrepancy.schema.json",
+  "type":"object", "additionalProperties":false, "required":["schema_version","id","claim_ids","description","status","created_at"],
+  "properties":{"schema_version":{"const":"1.0.0"},"id":{"type":"string","pattern":"^dsc-[a-z0-9-]+$"},"claim_ids":{"type":"array","minItems":2,"uniqueItems":true,"items":{"type":"string","pattern":"^clm-"}},"description":{"type":"string","minLength":1},"likely_causes":{"type":"array","items":{"type":"string"}},"status":{"enum":["open","resolved","accepted-uncertainty"]},"resolution":{"type":"string"},"reviewer":{"type":"string"},"created_at":{"type":"string","format":"date"}}
+}

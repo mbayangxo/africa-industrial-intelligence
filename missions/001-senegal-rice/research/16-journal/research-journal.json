@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "mission_id": "mission-001",
+  "entries": [
+    {
+      "id": "jrnl-m001-root-search-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Industrial Intelligence Director",
+      "activity": "search",
+      "query_or_reference": "site:fao.org rice milling process husk bran broken rice energy Senegal PDF; site:isra.sn riz Sénégal transformation pertes post récolte PDF; site:saed.sn riz Sénégal stockage transformation énergie PDF; site:worldbank.org Senegal rice value chain irrigation processing PDF",
+      "outcome": "No results retrieved; browsing service returned HTTP 401 Unauthorized.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-root-api-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Industrial Intelligence Director",
+      "activity": "search",
+      "query_or_reference": "World Bank public API request for Senegal cereal-production indicator",
+      "outcome": "No response body retrieved; direct HTTPS proxy tunnel returned HTTP 403 Forbidden.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-root-search-002",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Industrial Intelligence Director",
+      "activity": "search",
+      "query_or_reference": "Senegal rice production official statistics 2023",
+      "outcome": "No results retrieved; browsing service again returned HTTP 401 Unauthorized.",
+      "source_ids": [],
+      "reason": "Environment limitation"
+    },
+    {
+      "id": "jrnl-m001-root-handoff-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Industrial Intelligence Director",
+      "activity": "handoff",
+      "query_or_reference": "Parallel baseline/trade, consumer, and blind-discovery workstreams",
+      "outcome": "Specialists reported the same network denial and were instructed to preserve gaps without fabricating evidence.",
+      "source_ids": [],
+      "handoff_to": "Mission specialists",
+      "reason": "Maintain provenance and non-invention standard"
+    },
+    {
+      "id": "jrnl-m001-root-stop-001",
+      "timestamp": "2026-09-29T18:41:04Z",
+      "agent_role": "Industrial Intelligence Director",
+      "activity": "stop",
+      "query_or_reference": "Mission 001 desk-research stopping rules",
+      "outcome": "Cycle paused before evidence acquisition because all substantive questions require public sources that the environment could not access.",
+      "source_ids": [],
+      "reason": "Unavailable evidence path; coverage and saturation not achieved"
+    }
+  ]
+}

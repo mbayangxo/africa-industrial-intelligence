@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://africa-industrial-intelligence.local/schemas/adjacent-signal.schema.json",
+  "title": "Adjacent cross-sector signal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "mission_id", "statement", "classification", "claim_ids", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "id": {"type": "string", "pattern": "^sig-[a-z0-9-]+$"},
+    "mission_id": {"type": "string", "pattern": "^mission-[0-9]{3}$"},
+    "statement": {"type": "string", "minLength": 1},
+    "classification": {"enum": ["FACT", "ESTIMATE", "ASSUMPTION", "SCENARIO", "HYPOTHESIS"]},
+    "claim_ids": {"type": "array", "items": {"type": "string", "pattern": "^clm-"}},
+    "sectors": {"type": "array", "items": {"type": "string"}},
+    "geographies": {"type": "array", "items": {"type": "string"}},
+    "why_adjacent": {"type": "string"},
+    "next_question": {"type": "string"},
+    "status": {"enum": ["untriaged", "queued", "rejected", "promoted"]}
+  }
+}
