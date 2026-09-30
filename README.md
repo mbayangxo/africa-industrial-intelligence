@@ -4,7 +4,7 @@ An evidence-led foundation for a living intelligence engine that identifies what
 
 ## Current boundary
 
-This repository contains **foundation only**: governance, schemas, templates, mission scopes, ingestion design, agent roles, validation, and future integration boundaries. It contains no mission research, production observations, opportunity recommendations, frontend, or Kebu code.
+This repository contains **foundation only**: governance, schemas, templates, mission scopes, ingestion design, agent roles, validation, and future integration boundaries. It contains no completed mission findings, production observations, opportunity recommendations, frontend, or Kebu code. Mission folders may contain research plans, evidence-gap records, and blocked-attempt journals, but those are not substantive findings.
 
 ## Operating model
 
