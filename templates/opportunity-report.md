@@ -24,6 +24,18 @@ Who experiences what costly, recurring problem? What evidence distinguishes dema
 
 Domestic, intra-African, then export demand; substitutes; informal and formal providers; prices, quality, channels, procurement, regulation, and defensibility.
 
+## Route to market and merchant economics
+
+Map wholesalers, markets, boutiques/stalls, mini-markets, supermarkets, foodservice/institutional buyers, warehouses, delivery routes, payment terms, merchant/distributor margin or commission, reorder behavior, stockouts, service level, and working-capital burden. Store presence alone is not evidence of a viable route to market.
+
+## Marketing and repeat demand
+
+Identify actual chooser/buyer segments, languages, dishes/use cases, trust cues, creators/cooks/community figures, sampling or demonstration needs, media/social channels, acquisition economics where measurable, repeat-purchase evidence, and claims/messages that fail.
+
+## Continental and diaspora expansion architecture
+
+Separate reusable infrastructure (traceability, barcode, quality, case/pallet, data and logistics interfaces) from market-specific decisions. Every new country/diaspora market requires its own evidence for product preference, pack size, price, language, regulation, channels and campaign.
+
 ## Operating system
 
 Inputs, processes, throughput/yield ranges, people, machinery, energy, water, land, logistics, quality, maintenance, working capital, shared infrastructure, and local-fabrication pathway.
