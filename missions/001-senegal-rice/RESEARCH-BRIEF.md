@@ -29,24 +29,32 @@ The baseline is the latest reliable evidence available at collection time. Seek 
 
 1. System baseline and subnational geography.
 2. Production, agronomy, suppliers, harvest, and post-harvest.
-3. Trade, market structure, finance, prices, logistics, and distribution.
-4. Dedicated consumer, product-quality, retail, brand, and packaging research.
+3. Trade, market structure, finance, prices, logistics, distribution, and merchant economics.
+4. Dedicated consumer, product-quality, retail, brand, packaging, and marketing research.
 5. Complete industrial process and quality/safety/standards chain.
-6. Machinery, maintenance, spares, skills, localization, and redesign.
+6. Machinery, maintenance, spares, skills, local fabrication, localization, repairability, and redesign.
 7. Energy, water, storage, logistics, laboratories, finance, and other shared infrastructure.
-8. Material-stream and circularity mapping.
+8. Material-stream, by-product, and circularity mapping.
 9. Independent blinded discovery.
 10. Opportunity synthesis, economic scenarios only when eligible, and red team.
 
-## Consumer and packaging workstream
+## Consumer, distribution, marketing, and packaging workstream
 
 Separate measured product performance from package/brand perception. Do not presume foreign or local preference. Eventually compare local and imported products under consistent protocols for grain consistency, impurities, aroma, cooking behavior, taste, pack durability/quality, convenience, sizes, typography, trust signals, shelf visibility, recognition, price, distribution, and availability. Use blind product tests where safe and suitable, then separately test identified packs/brands. Mission 001 may inform future KHOUDIA, KHOUDIA NDAO, NDAO, or other development but selects no brand winner.
 
+Map how rice actually reaches households and foodservice: wholesalers, markets, neighborhood boutiques/stalls, mini-markets, supermarkets, restaurants, caterers, institutional buyers, informal channels, warehouses, regional stock points, transport routes, payment terms, margins, commissions, reorder behavior, stockouts, and delivery frequency. Test merchant economics rather than assuming distribution access from store presence alone.
+
+Treat marketing as evidence, not decoration. Identify who chooses and buys rice by segment; which languages, dishes, creators, cooks, family/community figures, media formats, trust cues, demonstrations, recipes, sampling, and social channels affect trial and repeat purchase; and which claims or campaigns fail. Do not assume one Senegalese segment represents another country.
+
+Design the operating architecture so a successful Senegal product can expand without being rebuilt: traceability, barcodes, case/pallet configuration, language and labeling system, distributor data, quality standards, and logistics interfaces should be extensible to other African markets and diaspora channels. Actual product, pack size, price, message, language, channel mix, and campaign must be researched market by market.
+
 ## Industrial engineering and circularity
 
-Trace seed/input → cultivation → harvest → drying → storage → milling → sorting/grading → quality control → packaging → warehousing → distribution. Assess several evidence-appropriate scales, not a default mega-factory. For each equipment function distinguish purchase now, local assembly, local fabrication, and potential local redesign; include power/heat, water, maintenance, spares, operator competence, reliability, and downtime.
+Trace seed/input → cultivation → harvest → drying → storage → milling → sorting/grading → quality control → packaging → warehousing → distribution. Assess several evidence-appropriate scales, not a default mega-factory.
 
-Account for every measurable input and output. Use `material stream` or `by-product` until disposition is established; do not label a stream waste before uses are investigated. Test broken rice, bran, husks, and newly observed streams for safe food, feed, energy, material, or industrial pathways, subject to composition, consistency, volume, buyer requirements, regulation, logistics, and economics.
+For every equipment function apply an ingenuity-first hierarchy: (1) verify the required function and throughput; (2) test modification or reuse of existing machinery; (3) test local fabrication; (4) test local assembly using serviceable components; (5) test shared machinery/service models; (6) import only irreducible components or complete equipment when lifecycle evidence justifies it. Compare reliability, food safety, precision, energy use, maintenance, spares, operator competence, downtime, total lifecycle cost, and the capability created locally. Supplier marketing is not sufficient evidence. Maagal Cayor or any future fabrication partner is a hypothesis/capability pathway until verified, not an assumed supplier.
+
+Account for every measurable input and output. Use `material stream` or `by-product` until disposition is established; do not label a stream waste before uses are investigated. Test broken rice, bran, husks, screenings, fines, rejected grain, packaging scrap, and newly observed streams for safe food, feed, oil, energy, material, soil, or industrial pathways, subject to composition, contamination risk, consistency, volume, buyer requirements, regulation, logistics, treatment, and economics. A by-product opportunity is not promoted until a plausible buyer/use and specification are evidenced.
 
 ## Non-goals
 
