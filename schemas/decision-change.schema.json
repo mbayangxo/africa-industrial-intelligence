@@ -1,0 +1,10 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+ "required":["id","mission_id","decision_question","before","after","change_type","evidence_claim_ids","human_decision","recorded_at"],
+ "properties":{
+  "id":{"type":"string","pattern":"^dchg-"},"mission_id":{"type":"string","pattern":"^mission-[0-9]{3}$"},
+  "decision_question":{"type":"string","minLength":1},"before":{"type":"string","minLength":1},"after":{"type":"string","minLength":1},
+  "change_type":{"enum":["no-change","revised","stopped","started","deferred","needs-field-evidence"]},
+  "evidence_claim_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^clm-"}},
+  "human_decision":{"type":"boolean"},"recorded_at":{"type":"string"},"notes":{"type":"string"}
+ }}
